@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { UserComponent } from './user/user.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
+import { VerMenuComponent } from './ver-menu/ver-menu.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { IngresoComponent } from './ingreso/ingreso.component';
     AppComponent,
     MenuComponent,
     UserComponent,
-    IngresoComponent
+    IngresoComponent,
+    VerMenuComponent
   ],
   imports: [
     BrowserModule,

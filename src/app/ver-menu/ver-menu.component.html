@@ -1,0 +1,14 @@
+<h1>Menu</h1>
+<ul>
+  <li *ngFor="let Menu of menu">
+    <img [src]="Menu.imagen" alt="{{ Menu.nombre }}" width="100">
+    <div>
+      <strong>{{ Menu.nombre }}</strong>
+      <p>{{ Menu.descripcion }}</p>
+      <p>{{ Menu.precio| currency }}</p>
+    </div>
+    </li>
+    <div class="box">
+    </div>
+    
+</ul>

@@ -2,7 +2,13 @@ const platos = require('../models/platos');
 const platosController= {};
 
 platosController.getPlatos = async (req, res) => {
-    res.send('Bienvenido al backend de Menu');
+  try{
+    const Platos = await platos.find();
+    res.json(Platos);
+  }catch (error){
+    console.error('Error al obtener los platos:', error);
+    res.status(500).json({ message: 'Error interno al obtener los platos' });
+  }
 }
 
 platosController.addPlato = async (req, res) => {   
