@@ -11,7 +11,7 @@ export class MenuService {
   constructor(private http: HttpClient) { }
   
   agregarPlato(plato: any) {
-    return this.http.post(this.apiUrl1, plato);
+    return this.http.post(this.apiUrl2, plato);
   }
 
 }

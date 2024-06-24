@@ -1,0 +1,14 @@
+<form (ngSubmit)="enviarFactura()">
+    <div class="form-group">
+      <div class="form-group">
+        <label for="email" class="form-label">Email:</label>
+        <input type="text" class="form-control" id="email" name="email" [(ngModel)]="facturaDatos.email" >
+      </div>
+  
+      <div class="form-group">
+        <label for="password" class="form-label">Password:</label>
+        <input type="text" class="form-control" id="password" name="password" [(ngModel)]="facturaDatos.password" >
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
