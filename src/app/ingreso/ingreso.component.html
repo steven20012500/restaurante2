@@ -1,14 +1,17 @@
-<form (ngSubmit)="enviarFactura()">
-    <div class="form-group">
-      <div class="form-group">
-        <label for="email" class="form-label">Email:</label>
-        <input type="text" class="form-control" id="email" name="email" [(ngModel)]="facturaDatos.email" >
-      </div>
-  
-      <div class="form-group">
-        <label for="password" class="form-label">Password:</label>
-        <input type="text" class="form-control" id="password" name="password" [(ngModel)]="facturaDatos.password" >
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
+<form (ngSubmit)="enviarFactura()" class="space-y-4">
+  <div class="space-y-4">
+    <div class="flex flex-col">
+      <label for="email" class="mb-2 text-sm font-medium text-gray-700">Email:</label>
+      <input type="text" id="email" name="email" [(ngModel)]="facturaDatos.email" 
+             class="px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
     </div>
-  </form>
+  
+    <div class="flex flex-col">
+      <label for="password" class="mb-2 text-sm font-medium text-gray-700">Password:</label>
+      <input type="text" id="password" name="password" [(ngModel)]="facturaDatos.password" 
+             class="px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+    </div>
+  
+    <button type="submit" class="px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Enviar</button>
+  </div>
+</form>
