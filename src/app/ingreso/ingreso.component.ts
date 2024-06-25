@@ -33,12 +33,15 @@ export class IngresoComponent {
     }
   });
 }*/
-loginUserData = { email: '', password: '' };
+usuarios: User = {
+  email: '',
+  password: '',
+};
 
 constructor(private authService: AuthService,private storageService: StorageService, private router: Router) {}
 
 loginUser() {
-  this.authService.loginUser(this.loginUserData).subscribe(
+  this.authService.loginUser(this.usuarios).subscribe(
     res => {
       this.storageService.setItem('token', res.token);
       this.router.navigate(['/verMenu']);

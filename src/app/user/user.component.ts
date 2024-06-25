@@ -8,14 +8,14 @@ import { User } from '../user';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  facturaDatos: User = {
-    email: 'steven20012500@gmail.com',
-    password: '123456',
+  usuarios: User = {
+    email: '',
+    password: '',
  };
  constructor(private userService: UserService) { }
  enviarFactura() {
        //ejecutar impuestos
-     this.userService.agregarUser(this.facturaDatos).subscribe({
+     this.userService.agregarUser(this.usuarios).subscribe({
        next: response => {
          console.log('Factura enviada', response);
        },

@@ -7,7 +7,6 @@ import { Menu } from './menu';
   providedIn: 'root'
 })
 export class MenuService {
-  private apiUrl1 = 'http://localhost:3000/api/agregarFactura' // URL al archivo JSON
   private apiUrl2= 'http://localhost:3000/api-menu/ingresoPlatos'
   private apiUrl3= 'http://localhost:3000/api-menu/verPlatos'
   constructor(private http: HttpClient) { }

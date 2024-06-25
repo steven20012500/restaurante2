@@ -16,7 +16,7 @@ export class MenuComponent {
     imagen: ''
  };
  constructor(private menuService: MenuService) { }
- enviarFactura() {
+ ingresarPlato() {
        //ejecutar impuestos
      this.menuService.agregarPlato(this.facturaDatos).subscribe({
        next: response => {
