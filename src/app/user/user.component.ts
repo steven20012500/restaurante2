@@ -18,6 +18,10 @@ export class UserComponent {
      this.userService.agregarUser(this.usuarios).subscribe({
        next: response => {
          console.log('Factura enviada', response);
+         this.usuarios = {
+          email: '',
+          password: '',
+       };
        },
        error: error => {
          console.error('Error al enviar la factura', error);
