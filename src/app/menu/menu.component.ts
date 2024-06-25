@@ -9,11 +9,11 @@ import { Menu } from '../menu';
 })
 export class MenuComponent {
   facturaDatos: Menu = {
-    nombre: 'pizza',
-    precio: 8,
-    descripcion: 'peperoni',
-    categoria: 'comida',
-    imagen: 'ad.jpg'
+    nombre: '',
+    precio: 0,
+    descripcion: '',
+    categoria: '',
+    imagen: ''
  };
  constructor(private menuService: MenuService) { }
  enviarFactura() {
@@ -21,6 +21,13 @@ export class MenuComponent {
      this.menuService.agregarPlato(this.facturaDatos).subscribe({
        next: response => {
          console.log('Factura enviada', response);
+         this.facturaDatos = {
+          nombre: '',
+          precio: 0,
+          descripcion: '',
+          categoria: '',
+          imagen: ''
+        };
        },
        error: error => {
          console.error('Error al enviar la factura', error);

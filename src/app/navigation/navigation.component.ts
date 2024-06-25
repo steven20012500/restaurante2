@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { StorageService } from '../storage.service';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class NavigationComponent {
   isMobileMenuOpen = false;
   isUserMenuOpen = false;
+  constructor(private storageService: StorageService) {}
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
@@ -16,4 +17,8 @@ export class NavigationComponent {
   toggleUserMenu() {
     this.isUserMenuOpen = !this.isUserMenuOpen;
   }
+  cerrarSesion() {
+    this.storageService.removeItem('token');
+  }
 }
+

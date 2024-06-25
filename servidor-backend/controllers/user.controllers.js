@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
+const { fchmodSync } = require('fs');
 const usersController = {};
 
 usersController.getUsers = async (req, res) => {
@@ -24,8 +25,8 @@ usersController.addUser = async (req, res) => {
 
 usersController.loginUser = async (req, res) => {
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
   try {
+    const user = await User.findOne({ email });
       if (!user) {
           return res.status(401).send("El correo no existe");
       }
@@ -62,19 +63,33 @@ usersController.getTasks = async (req, res) =>
 ]) 
 }
 
-function verifyToken(req, res, next){
-    console.log(req.headers.authorization);
-    if(!req.headers.authorization){
-        return res.status(401).send('No tiene autorización paara continuar')
+function verifyToken(req, res, next) {
+    const authHeader = req.headers.authorization;
+    if (!authHeader) {
+      return res.status(401).send('No authorization header provided');
     }
-    const token = req.headers.authorization.split(' ')[1]
-    if(token === 'null'){
-        return res.status(401).send('No existe token')
+    const token = authHeader.split(' ')[1];
+    if (!token) {
+      return res.status(401).send('No token provided');
     }
-    const payload = jwt.verify(token, 'secretkey');
-    console.log(payload);
-    req.userId = payload._id
-    next()
+    try {
+      const payload = jwt.verify(token, 'secretkey');
+      req.userId = payload._id;
+      next();
+    } catch (error) {
+      res.status(401).send('Invalid token');
+    }
+  }
+
+//inicio de sesion Con token
+function generateToken(user) {
+    return jwt.sign({ _id: user.id, email: user.email }, 'secretkey', { expiresIn: '1h' });
 }
+
+// moddleware to verify token
+
+
+
+
 
 module.exports = usersController;

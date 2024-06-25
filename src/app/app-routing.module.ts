@@ -5,13 +5,15 @@ import { MenuComponent } from './menu/menu.component';
 import { NavigationComponent } from './navigation/navigation.component'; 
 import { UserComponent } from './user/user.component'; 
 import { VerMenuComponent } from './ver-menu/ver-menu.component';
+import { authGuard } from './auth.guard';
+
 
 const routes: Routes = [
   { path: 'ingreso', component: IngresoComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'navigation', component: NavigationComponent },
   { path: 'user', component: UserComponent },
-  { path: 'verMenu', component: VerMenuComponent},
+  { path: 'verMenu', component: VerMenuComponent, canActivate : [authGuard]},
 
   { path: '', redirectTo: '/ingreso', pathMatch: 'full' } // Redirige al informacion por defecto
 ];
