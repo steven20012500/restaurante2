@@ -63,7 +63,7 @@ usersController.getTasks = async (req, res) =>
 ]) 
 }
 
-function verifyToken(req, res, next) {
+function verifyToken2 (req, res, next)  {
     const authHeader = req.headers.authorization;
     if (!authHeader) {
       return res.status(401).send('No authorization header provided');
@@ -93,3 +93,4 @@ function generateToken(user) {
 
 
 module.exports = usersController;
+//module.exports = verifyToken2;
