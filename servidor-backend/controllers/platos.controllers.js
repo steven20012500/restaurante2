@@ -1,4 +1,5 @@
 const platos = require('../models/platos');
+
 const platosController= {};
 
 platosController.getPlatos = async (req, res) => {
