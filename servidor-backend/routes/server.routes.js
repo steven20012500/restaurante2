@@ -12,7 +12,7 @@ router.post('/ingresoPlatos', platos.addPlato);
 router.post('/registro',user.addUser);
 router.post('/ingreso',user.loginUser);
 router.get('/tareas', user.getTasks);
-router.post('/orden',authMiddleware, order.createOrder);
+router.post('/orden',verifyToken, order.createOrder);
 
 //router.get('/tareas-privadas', user.getTasksPrivadas);
 module.exports = router;

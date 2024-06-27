@@ -40,6 +40,7 @@ const authMiddleware2 = (req, res, next) => {
       next();
     });
   };
+  /*
   const verifyToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
@@ -56,8 +57,29 @@ const authMiddleware2 = (req, res, next) => {
       req.user = user;  // Guardar el usuario en el objeto de solicitud
       next();
     });
-  };
+  };*/
 
+  function verifyToken(req, res, next) {
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader) {
+        return res.status(401).send('No authorization header provided');
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    if (!token) {
+        return res.status(401).send('No token provided');
+    }
+
+    try {
+        const payload = jwt.verify(token, 'secretkey'); // Aquí debes usar process.env.ACCESS_TOKEN_SECRET
+        req.userId = payload._id; // Suponiendo que el payload tiene un campo _id
+        next();
+    } catch (error) {
+        return res.status(401).send('Invalid token');
+    }
+}
 //module.exports = authMiddleware;
 module.exports = authMiddleware2;
 module.exports = verifyToken;

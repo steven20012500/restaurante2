@@ -22,7 +22,7 @@ export class VerMenuComponent /*implements OnInit*/ {
     const token = localStorage.getItem('token'); // Obtener el token del localStorage (asegúrate de haberlo almacenado correctamente)
     const token2 = this.storageService.getItem('token');
     console.log('Token de autenticación:', token2);
-    if (!token) {
+    if (!token2) {
       console.error('Token de autenticación no encontrado.');
       return;
     }
