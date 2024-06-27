@@ -6,10 +6,9 @@ orderController.createOrder = async (req, res) => {
     
     try {
       const { dishId, quantity } = req.body;
-
-      // Verify the dish exists
-      const dish = await Dish.findById(dishId);
+      const dish = 'ObjectId('+dishId+')';
       if (!dish) {
+        console.log(dish);
         return res.status(404).json({ message: 'Plato no encontrado' });
       }
   

@@ -8,40 +8,76 @@ import { StorageService } from '../storage.service';
   templateUrl: './ver-menu.component.html',
   styleUrl: './ver-menu.component.css'
 })
-export class VerMenuComponent /*implements OnInit*/ {
+export class VerMenuComponent implements OnInit {
   menu: Menu[] = [];
-  constructor(private menuService: MenuService, private orderService: OrderService,private storageService: StorageService) { } 
+  orders: { dishId: string, quantity: number }[] = [];
+  quantitySelected: boolean = false; // Variable para controlar si se ha seleccionado cantidad
+  showGenerateMessage: boolean = false; // Variable para mostrar mensaje al generar la orden
+
+  constructor(
+    private menuService: MenuService, 
+    private orderService: OrderService,
+    private storageService: StorageService
+  ) { } 
   ngOnInit(): void {
     this.menuService.verPlatos().subscribe(menu => {
-      this.menu = menu;  
+      this.menu = menu.map(item => ({ ...item, quantity: 1, quantitySelected: false })); // Añadir campo quantity e isSelected a cada plato
     });
   }
+
   orderData = { dishId: '', quantity: 1 };
 
+  selectDish(menu: Menu) {
+    // Verificar si ya existe el plato en las órdenes
+    const existingOrderIndex = this.orders.findIndex(order => order.dishId === menu._id);
+
+    if (existingOrderIndex !== -1) {
+      // Si ya existe, actualizar la cantidad
+      this.orders[existingOrderIndex].quantity += menu.quantity;
+      this.quantitySelected = true;
+    } else {
+      // Si no existe, agregar como nueva orden
+      this.orders.push({ dishId: menu._id, quantity: menu.quantity });
+      this.quantitySelected = true;
+    }
+    menu.quantitySelected = true; // Marcar el plato como seleccionado
+
+  }
+
   GenerarOrden() {
-    const token = localStorage.getItem('token'); // Obtener el token del localStorage (asegúrate de haberlo almacenado correctamente)
-    const token2 = this.storageService.getItem('token');
-    console.log('Token de autenticación:', token2);
-    if (!token2) {
+    const token = this.storageService.getItem('token');
+   
+    if (!token) {
       console.error('Token de autenticación no encontrado.');
       return;
     }
 
-    if (token2) {
-      this.orderService.createOrder(this.orderData, token2)
+    if (this.orders.length === 0) {
+      console.error('No se han seleccionado platos.');
+      return;
+    }
+
+    // Recorrer todas las órdenes seleccionadas y crear una orden para cada una
+    this.orders.forEach(order => {
+      this.orderService.createOrder(order, token)
         .subscribe(
           (response) => {
-            console.log('Orden creada exitosamente:', response);
+            console.log(`Orden creada exitosamente para dishId ${order.dishId}:`, response);
             // Aquí puedes manejar la respuesta del servidor, como mostrar un mensaje de éxito o navegar a otra página
+            this.showGenerateMessage = true; // Mostrar mensaje de orden generada exitosamente
+
           },
           (error) => {
-            console.error('Error al crear la orden:', error);
+            console.error(`Error al crear la orden para dishId ${order.dishId}:`, error);
             // Aquí puedes manejar el error, como mostrar un mensaje de error al usuario
           }
         );
-    } else {
-      console.error('Token de autenticación no encontrado.');
-      return; // Add a return statement here to exit the function when token2 is null
-    }
+    });
+
+    // Limpiar las órdenes después de generarlas
+    this.orders = [];
+    this.menu = this.menu.map(item => ({ ...item, quantity: 1, quantitySelected: false}));
+
+
   }
 }

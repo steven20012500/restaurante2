@@ -9,11 +9,14 @@ import { Menu } from '../menu';
 })
 export class MenuComponent {
   facturaDatos: Menu = {
+    _id: '',
     nombre: '',
     precio: 0,
     descripcion: '',
     categoria: '',
-    imagen: ''
+    imagen: '',
+    quantity: 0,
+    quantitySelected: false,
  };
  constructor(private menuService: MenuService) { }
  ingresarPlato() {
@@ -22,11 +25,14 @@ export class MenuComponent {
        next: response => {
          console.log('Factura enviada', response);
          this.facturaDatos = {
+          _id: '',
           nombre: '',
           precio: 0,
           descripcion: '',
           categoria: '',
-          imagen: ''
+          imagen: '',
+          quantity: 0,
+          quantitySelected: false
         };
        },
        error: error => {
