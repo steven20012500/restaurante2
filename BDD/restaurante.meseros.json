@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "667eaa0a52545924f275e47e"
+  },
+  "nombre": "Steven ",
+  "imagen": "https://selecciones.com.mx/wp-content/uploads/2018/08/cosas-de-meseros.jpg",
+  "__v": 11,
+  "calificaciones": [
+    2,
+    2,
+    4,
+    2,
+    1,
+    4,
+    4,
+    1,
+    2,
+    5,
+    2
+  ]
+},
+{
+  "_id": {
+    "$oid": "667eb2d13ebf83b375014553"
+  },
+  "nombre": "Maria",
+  "imagen": "https://estudioenmexico.com.mx/wp-content/uploads/2023/07/AdobeStock_301488281-scaled.jpeg",
+  "calificaciones": [
+    2,
+    3,
+    5,
+    2,
+    4,
+    5,
+    5,
+    5,
+    5,
+    3
+  ],
+  "__v": 10
+}]
