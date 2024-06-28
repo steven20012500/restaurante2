@@ -10,6 +10,8 @@ import { UserComponent } from './user/user.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
 import { VerMenuComponent } from './ver-menu/ver-menu.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { MeserosComponent } from './meseros/meseros.component';
+import { CalificarMeseroComponent } from './calificar-mesero/calificar-mesero.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     UserComponent,
     IngresoComponent,
     VerMenuComponent,
-    NavigationComponent
+    NavigationComponent,
+    MeserosComponent,
+    CalificarMeseroComponent
   ],
   imports: [
     BrowserModule,

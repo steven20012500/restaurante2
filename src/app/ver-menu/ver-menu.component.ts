@@ -19,6 +19,7 @@ export class VerMenuComponent implements OnInit {
     private orderService: OrderService,
     private storageService: StorageService
   ) { } 
+  
   ngOnInit(): void {
     this.menuService.verPlatos().subscribe(menu => {
       this.menu = menu.map(item => ({ ...item, quantity: 1, quantitySelected: false })); // Añadir campo quantity e isSelected a cada plato
