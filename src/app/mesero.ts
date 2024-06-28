@@ -3,6 +3,7 @@ export class Mesero {
         this._id = _id;
         this.nombre = nombre;
         this.imagen = imagen;
+        
       }
         _id: string;
       nombre: string;

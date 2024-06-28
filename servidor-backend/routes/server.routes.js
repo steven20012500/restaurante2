@@ -7,12 +7,12 @@ const mesero = require('../controllers/meseros.controllers');
 const verifyToken = require('../controllers/authMiddleware');
 
 router.get('/verPlatos', platos.getPlatos);
-router.post('/ingresoPlatos', platos.addPlato);
-router.post('/registro',user.addUser);
+router.post('/ingresoPlatos',verifyToken, platos.addPlato);
+router.post('/registro', verifyToken,user.addUser);
 router.post('/ingreso',user.loginUser);
 router.get('/tareas', user.getTasks);
 router.post('/orden',verifyToken, order.createOrder);
-router.post('/ingresoMesero',mesero.addMesero);
+router.post('/ingresoMesero',verifyToken, mesero.addMesero);
 router.get('/verMeseros',mesero.getMeseros);
 router.post('/calificarMesero',mesero.calificarMesero);
 
