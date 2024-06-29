@@ -11,5 +11,5 @@ export class UserService {
   agregarUser(user: any) {
     return this.http.post(this.apiUrl1, user);
   }
-
+  
 }
