@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Mesero } from '../mesero';
-import { MeserosService } from '../meseros.service';
-import { StorageService } from '../storage.service';
+import { Mesero } from '../class/mesero';
+import { MeserosService } from '../services/meseros.service';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-calificar-mesero',

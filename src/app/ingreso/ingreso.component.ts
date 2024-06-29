@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IngresoService } from '../ingreso.service';
-import { User } from '../user';
-import { AuthService } from '../auth.service';
+import { IngresoService } from '../services/ingreso.service';
+import { User } from '../class/user';
+import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router'; // Import the correct module for Router
-import { StorageService } from '../storage.service';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-ingreso',

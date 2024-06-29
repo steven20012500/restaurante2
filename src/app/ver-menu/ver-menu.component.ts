@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuService } from '../menu.service';
-import { Menu } from '../menu';
-import { OrderService } from '../order.service';
-import { StorageService } from '../storage.service';
+import { MenuService } from '../services/menu.service';
+import { Menu } from '../class/menu';
+import { OrderService } from '../services/order.service';
+import { StorageService } from '../services/storage.service';
 @Component({
   selector: 'app-ver-menu',
   templateUrl: './ver-menu.component.html',

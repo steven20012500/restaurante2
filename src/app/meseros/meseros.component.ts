@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Mesero } from '../mesero';
-import { MeserosService } from '../meseros.service';
+import { Mesero } from '../class/mesero';
+import { MeserosService } from '../services/meseros.service';
 
 @Component({
   selector: 'app-meseros',

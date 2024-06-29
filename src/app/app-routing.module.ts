@@ -5,7 +5,7 @@ import { MenuComponent } from './menu/menu.component';
 import { NavigationComponent } from './navigation/navigation.component'; 
 import { UserComponent } from './user/user.component'; 
 import { VerMenuComponent } from './ver-menu/ver-menu.component';
-import { authGuard } from './auth.guard';
+import { authGuard } from './guards/auth.guard';
 import { MeserosComponent } from './meseros/meseros.component';
 import { CalificarMeseroComponent } from './calificar-mesero/calificar-mesero.component';
 

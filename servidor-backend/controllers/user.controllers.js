@@ -15,7 +15,7 @@ usersController.addUser = async (req, res) => {
         const { email, password } = req.body;
         const newUser = new User({ email, password });
         await newUser.save();
-      //  const token = jwt.sign({ _id: newUser._id }, accessTokenSecret);  Aquí usas jwt.sign
+       const token = jwt.sign({ _id: newUser._id }, accessTokenSecret);//  Aquí usas jwt.sign
         res.status(200).json({ message: 'Usuario guardado', token, user: newUser });
     } catch (error) {
         console.error('Error al guardar usuario:', error);
