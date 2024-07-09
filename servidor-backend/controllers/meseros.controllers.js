@@ -40,6 +40,7 @@ meserosController.calificarMesero = async (req, res) => {
        return res.status(404).json({ message: 'Mesero no encontrado' });
       }
       Mesero.calificaciones.push(calificacion);
+      Mesero.promedio = Mesero.calificaciones.reduce((a, b) => a + b, 0) / Mesero.calificaciones.length;
       await Mesero.save();
       res.status(200).json({ message: 'Calificación añadida', Mesero });
     } catch (error) {

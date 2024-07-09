@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MenuService } from '../services/menu.service';
 import { Menu } from '../class/menu';
 import { OrderService } from '../services/order.service';
@@ -10,7 +10,9 @@ import { StorageService } from '../services/storage.service';
   styleUrls: ['./ver-menu.component.css'] // Cambié a 'styleUrls' para arreglar el typo
 })
 export class VerMenuComponent implements OnInit {
+  @ViewChild('PedidoRealizado', { static: false }) resultadoElement: ElementRef | undefined;
   menu: Menu[] = [];
+  statePedido: boolean = false;
   orders: { dishId: string, quantity: number }[] = [];
   quantitySelected: boolean = false; // Variable para controlar si se ha seleccionado cantidad
   showGenerateMessage: boolean = false; // Variable para mostrar mensaje al generar la orden
@@ -84,6 +86,13 @@ export class VerMenuComponent implements OnInit {
         console.log('Orden creada exitosamente:', response);
         this.showGenerateMessage = true; // Mostrar mensaje de orden generada exitosamente
         // Limpiar las órdenes después de generarlas
+        this.statePedido = true;
+        this.scrollToResultado();
+
+        setTimeout(() => {
+          this.statePedido = false;
+        }, 3000);
+    
         this.orders = [];
         this.menu = this.menu.map(item => ({ ...item, quantity: 1, quantitySelected: false }));
       },
@@ -93,4 +102,11 @@ export class VerMenuComponent implements OnInit {
       }
     );
   }
+
+  private scrollToResultado() {
+    if (this.resultadoElement) {
+      this.resultadoElement.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
 }
