@@ -1,0 +1,13 @@
+.bg-custom {
+    background-image: url('https://img.freepik.com/foto-gratis/hombre-cortando-tomate-organico-fresco-comida-saludable-generada-ia_188544-40154.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1718236800&semt=sph');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Estilos para los iconos de redes sociales */
+  .social-icons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }

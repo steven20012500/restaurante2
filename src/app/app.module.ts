@@ -12,6 +12,7 @@ import { VerMenuComponent } from './ver-menu/ver-menu.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MeserosComponent } from './meseros/meseros.component';
 import { CalificarMeseroComponent } from './calificar-mesero/calificar-mesero.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CalificarMeseroComponent } from './calificar-mesero/calificar-mesero.co
     VerMenuComponent,
     NavigationComponent,
     MeserosComponent,
-    CalificarMeseroComponent
+    CalificarMeseroComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
