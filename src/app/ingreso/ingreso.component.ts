@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { IngresoService } from '../services/ingreso.service';
 import { User } from '../class/user';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router'; // Import the correct module for Router
@@ -26,7 +25,6 @@ loginUser() {
       this.router.navigate(['/verMenu']).then(() => {
         window.location.reload();
       });
-
     },
     err => console.error(err)
   );
