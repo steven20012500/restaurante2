@@ -1,0 +1,801 @@
+[{
+  "_id": {
+    "$oid": "668cb76e07d569297f8f55f8"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac4cb08ef8bdc97df2be6"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668cb76e07d569297f8f55f9"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668cb76e07d569297f8f55fa"
+      }
+    }
+  ],
+  "total": 40.5,
+  "createdAt": {
+    "$date": "2024-07-09T04:07:10.018Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668cb78707d569297f8f55fc"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac07808ef8bdc97df2bd2"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668cb78707d569297f8f55fd"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac10408ef8bdc97df2bd5"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668cb78707d569297f8f55fe"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac4cb08ef8bdc97df2be6"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668cb78707d569297f8f55ff"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac64708ef8bdc97df2be9"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668cb78707d569297f8f5600"
+      }
+    }
+  ],
+  "total": 29,
+  "createdAt": {
+    "$date": "2024-07-09T04:07:35.202Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668cb7a307d569297f8f5603"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac07808ef8bdc97df2bd2"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668cb7a307d569297f8f5604"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac10408ef8bdc97df2bd5"
+      },
+      "quantity": 2,
+      "_id": {
+        "$oid": "668cb7a307d569297f8f5605"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668cb7a307d569297f8f5606"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac4cb08ef8bdc97df2be6"
+      },
+      "quantity": 4,
+      "_id": {
+        "$oid": "668cb7a307d569297f8f5607"
+      }
+    }
+  ],
+  "total": 72,
+  "createdAt": {
+    "$date": "2024-07-09T04:08:03.026Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668cb92a07d569297f8f560b"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac07808ef8bdc97df2bd2"
+      },
+      "quantity": 4,
+      "_id": {
+        "$oid": "668cb92a07d569297f8f560c"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac4cb08ef8bdc97df2be6"
+      },
+      "quantity": 2,
+      "_id": {
+        "$oid": "668cb92a07d569297f8f560d"
+      }
+    }
+  ],
+  "total": 45,
+  "createdAt": {
+    "$date": "2024-07-09T04:14:34.585Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d37a9406dbef0c3f978c9"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 5,
+      "_id": {
+        "$oid": "668d37a9406dbef0c3f978ca"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667abd8808ef8bdc97df2bc4"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d37a9406dbef0c3f978cb"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac4cb08ef8bdc97df2be6"
+      },
+      "quantity": 2,
+      "_id": {
+        "$oid": "668d37a9406dbef0c3f978cc"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac64708ef8bdc97df2be9"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d37a9406dbef0c3f978cd"
+      }
+    }
+  ],
+  "total": 63.5,
+  "createdAt": {
+    "$date": "2024-07-09T13:14:17.687Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d3cdd406dbef0c3f9790b"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d3cdd406dbef0c3f9790c"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac4cb08ef8bdc97df2be6"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d3cdd406dbef0c3f9790d"
+      }
+    }
+  ],
+  "total": 31.5,
+  "createdAt": {
+    "$date": "2024-07-09T13:36:29.518Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d3f50406dbef0c3f97921"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667abfea08ef8bdc97df2bcf"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d3f50406dbef0c3f97922"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "6679b2f228f1580ed071274d"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d3f50406dbef0c3f97923"
+      }
+    }
+  ],
+  "total": 43,
+  "createdAt": {
+    "$date": "2024-07-09T13:46:56.736Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d4057406dbef0c3f9792a"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "6679b2f228f1580ed071274d"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d4057406dbef0c3f9792b"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667abfea08ef8bdc97df2bcf"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d4057406dbef0c3f9792c"
+      }
+    }
+  ],
+  "total": 43,
+  "createdAt": {
+    "$date": "2024-07-09T13:51:19.158Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d40b9406dbef0c3f97930"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "6679b2f228f1580ed071274d"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d40b9406dbef0c3f97931"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d40b9406dbef0c3f97932"
+      }
+    }
+  ],
+  "total": 45,
+  "createdAt": {
+    "$date": "2024-07-09T13:52:57.326Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d40cb406dbef0c3f97935"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "6679b2f228f1580ed071274d"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d40cb406dbef0c3f97936"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667abd8808ef8bdc97df2bc4"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d40cb406dbef0c3f97937"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d40cb406dbef0c3f97938"
+      }
+    }
+  ],
+  "total": 24,
+  "createdAt": {
+    "$date": "2024-07-09T13:53:15.142Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d40f0406dbef0c3f9793b"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "6679b2f228f1580ed071274d"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d40f0406dbef0c3f9793c"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667abd8808ef8bdc97df2bc4"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d40f0406dbef0c3f9793d"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac07808ef8bdc97df2bd2"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d40f0406dbef0c3f9793e"
+      }
+    }
+  ],
+  "total": 48,
+  "createdAt": {
+    "$date": "2024-07-09T13:53:52.718Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d4101406dbef0c3f97940"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac07808ef8bdc97df2bd2"
+      },
+      "quantity": 4,
+      "_id": {
+        "$oid": "668d4101406dbef0c3f97941"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667abfea08ef8bdc97df2bcf"
+      },
+      "quantity": 4,
+      "_id": {
+        "$oid": "668d4101406dbef0c3f97942"
+      }
+    }
+  ],
+  "total": 64,
+  "createdAt": {
+    "$date": "2024-07-09T13:54:09.894Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d4114406dbef0c3f97944"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "6679b2f228f1580ed071274d"
+      },
+      "quantity": 2,
+      "_id": {
+        "$oid": "668d4114406dbef0c3f97945"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667abd8808ef8bdc97df2bc4"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d4114406dbef0c3f97946"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac07808ef8bdc97df2bd2"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d4114406dbef0c3f97947"
+      }
+    }
+  ],
+  "total": 36,
+  "createdAt": {
+    "$date": "2024-07-09T13:54:28.254Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d411f406dbef0c3f97949"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac64708ef8bdc97df2be9"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d411f406dbef0c3f9794a"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac4cb08ef8bdc97df2be6"
+      },
+      "quantity": 4,
+      "_id": {
+        "$oid": "668d411f406dbef0c3f9794b"
+      }
+    }
+  ],
+  "total": 37.5,
+  "createdAt": {
+    "$date": "2024-07-09T13:54:39.494Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d4132406dbef0c3f9794e"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d4132406dbef0c3f9794f"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac4cb08ef8bdc97df2be6"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d4132406dbef0c3f97950"
+      }
+    }
+  ],
+  "total": 31.5,
+  "createdAt": {
+    "$date": "2024-07-09T13:54:58.566Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d413f406dbef0c3f97952"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "6679b2f228f1580ed071274d"
+      },
+      "quantity": 4,
+      "_id": {
+        "$oid": "668d413f406dbef0c3f97953"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667abd8808ef8bdc97df2bc4"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d413f406dbef0c3f97954"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667abe8c08ef8bdc97df2bc9"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d413f406dbef0c3f97955"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac07808ef8bdc97df2bd2"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d413f406dbef0c3f97956"
+      }
+    }
+  ],
+  "total": 90,
+  "createdAt": {
+    "$date": "2024-07-09T13:55:11.974Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d4316406dbef0c3f97965"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "6679b2f228f1580ed071274d"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d4316406dbef0c3f97966"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667abfea08ef8bdc97df2bcf"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d4316406dbef0c3f97967"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac07808ef8bdc97df2bd2"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d4316406dbef0c3f97968"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d4316406dbef0c3f97969"
+      }
+    }
+  ],
+  "total": 37,
+  "createdAt": {
+    "$date": "2024-07-09T14:03:02.311Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d43e0406dbef0c3f97987"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "6679b2f228f1580ed071274d"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d43e0406dbef0c3f97988"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667abd8808ef8bdc97df2bc4"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d43e0406dbef0c3f97989"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac07808ef8bdc97df2bd2"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d43e0406dbef0c3f9798a"
+      }
+    }
+  ],
+  "total": 24,
+  "createdAt": {
+    "$date": "2024-07-09T14:06:24.199Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d43e7406dbef0c3f9798c"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d43e7406dbef0c3f9798d"
+      }
+    }
+  ],
+  "total": 9,
+  "createdAt": {
+    "$date": "2024-07-09T14:06:31.286Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d457c406dbef0c3f979a9"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d457c406dbef0c3f979aa"
+      }
+    }
+  ],
+  "total": 27,
+  "createdAt": {
+    "$date": "2024-07-09T14:13:16.592Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668d4dec406dbef0c3f979b6"
+  },
+  "user": {
+    "$oid": "6678cb2df883be4bc6e4cdab"
+  },
+  "dishes": [
+    {
+      "dishId": {
+        "$oid": "667ac1c608ef8bdc97df2bda"
+      },
+      "quantity": 3,
+      "_id": {
+        "$oid": "668d4dec406dbef0c3f979b7"
+      }
+    },
+    {
+      "dishId": {
+        "$oid": "667ac4cb08ef8bdc97df2be6"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "668d4dec406dbef0c3f979b8"
+      }
+    }
+  ],
+  "total": 31.5,
+  "createdAt": {
+    "$date": "2024-07-09T14:49:16.128Z"
+  },
+  "__v": 0
+}]

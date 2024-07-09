@@ -1,41 +1,40 @@
 [{
   "_id": {
-    "$oid": "667eaa0a52545924f275e47e"
+    "$oid": "668d5171c01c210564a8d258"
   },
-  "nombre": "Steven ",
+  "nombre": "Alejandro García",
   "imagen": "https://selecciones.com.mx/wp-content/uploads/2018/08/cosas-de-meseros.jpg",
-  "__v": 11,
   "calificaciones": [
     2,
-    2,
-    4,
-    2,
-    1,
-    4,
-    4,
-    1,
-    2,
     5,
+    5,
+    2,
     2
-  ]
+  ],
+  "__v": 5,
+  "promedio": 3.2
 },
 {
   "_id": {
-    "$oid": "667eb2d13ebf83b375014553"
+    "$oid": "668d5927649c01871a202695"
   },
-  "nombre": "Maria",
-  "imagen": "https://estudioenmexico.com.mx/wp-content/uploads/2023/07/AdobeStock_301488281-scaled.jpeg",
+  "nombre": "Jorge Ramírez",
+  "imagen": "https://us.123rf.com/450wm/kadmy/kadmy1510/kadmy151000189/58661747-alegre-camarero-masculino-en-readu-restaurante-a-servicio.jpg?ver=6",
   "calificaciones": [
-    2,
-    3,
-    5,
-    2,
-    4,
-    5,
-    5,
-    5,
-    5,
     3
   ],
-  "__v": 10
+  "__v": 1,
+  "promedio": 3
+},
+{
+  "_id": {
+    "$oid": "668d596c649c01871a202699"
+  },
+  "nombre": "Laura Fernández",
+  "imagen": "https://www.leonardoartigas.com/wp-content/uploads/2021/03/mesero-de-eventos-y-bodas-leonardo-artigas-1-scaled.jpg",
+  "calificaciones": [
+    4
+  ],
+  "__v": 1,
+  "promedio": 4
 }]
