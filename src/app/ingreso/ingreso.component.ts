@@ -12,27 +12,6 @@ import { StorageService } from '../services/storage.service';
 })
 export class IngresoComponent {
   
-  //facturaDatos: User = {
-   // email: 'steven20012500@gmail.com',
-    //password: '123456',
- //};
- /*constructor(private ingresoService: IngresoService) { }
-
- enviarFactura() {
-  this.ingresoService.ingresoUser(this.facturaDatos).subscribe({
-    next: response => {
-      console.log('Solicitud enviada', response);
-      alert('Login correcto');
-    },
-    error: error => {
-      console.error('Error al enviar la solicitud', error);
-      alert('Error al enviar la solicitud: ' + error.message);
-    },
-    complete: () => {
-      console.log('Solicitud completada');
-    }
-  });
-}*/
 usuarios: User = {
   email: '',
   password: '',
@@ -44,7 +23,10 @@ loginUser() {
   this.authService.loginUser(this.usuarios).subscribe(
     res => {
       this.storageService.setItem('token', res.token);
-      this.router.navigate(['/verMenu']);
+      this.router.navigate(['/verMenu']).then(() => {
+        window.location.reload();
+      });
+
     },
     err => console.error(err)
   );

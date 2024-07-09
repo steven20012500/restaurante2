@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mesero } from '../class/mesero';
 import { MeserosService } from '../services/meseros.service';
-import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-calificar-mesero',
@@ -14,14 +13,12 @@ export class CalificarMeseroComponent implements OnInit {
 
 
   constructor(
-    private meseroService: MeserosService, 
-    private storageService: StorageService,
-    
+    private meseroService: MeserosService,
   ) { } 
   
   ngOnInit(): void {
     this.meseroService.verMeseros().subscribe((meseros: Mesero[]) => {
-      this.meseros = meseros.map(mesero => ({ ...mesero, calificacion: 0 })); // Añadir campo calificación a cada mesero
+      this.meseros = meseros.map(mesero => ({ ...mesero, calificacion: 0, scoreSelected : false })); // Añadir campo calificación a cada mesero
     });
   }
 
@@ -29,6 +26,7 @@ export class CalificarMeseroComponent implements OnInit {
     this.meseroService.calificarMesero(meseroId, calificacion).subscribe(
       (response) => {
         console.log('Calificación añadida:', response);
+
       },
       (error) => {
         console.error('Error al calificar mesero:', error);

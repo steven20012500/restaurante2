@@ -12,6 +12,8 @@ export class MeserosComponent {
     _id: '',
     nombre: '',
     imagen: '',
+    scoreSelected: false,
+    calificacion: 0
  };
  constructor(private meseroService: MeserosService) { }
  ingresarMesero() {
@@ -23,6 +25,8 @@ export class MeserosComponent {
           _id: '',
           nombre: '',
           imagen: '',
+          scoreSelected: false,
+          calificacion: 0
         };
        },
        error: error => {

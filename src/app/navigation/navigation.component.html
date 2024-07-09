@@ -1,4 +1,4 @@
-<nav class="bg-gray-800">
+<nav  class="bg-gray-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -21,12 +21,12 @@
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <a routerLink="/inicio" routerLinkActive="active" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
-              <a routerLink="/ingreso" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
-              <a routerLink="/menu" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Plato</a>
-              <a routerLink="/user" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Usuario</a>
-              <a routerLink="/verMenu" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Ver Menu</a>
-              <a routerLink="/meseros" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Mesero</a>
-              <a routerLink="/calificarMesero" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calificar Mesero</a>
+              <a *ngIf="!isAuthenticated" routerLink="/ingreso" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
+              <a *ngIf="isAuthenticated" routerLink="/menu" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Plato</a>
+              <a *ngIf="isAuthenticated" routerLink="/user" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Usuario</a>
+              <a *ngIf="isAuthenticated" routerLink="/verMenu" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Ver Menu</a>
+              <a *ngIf="isAuthenticated" routerLink="/meseros" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Mesero</a>
+              <a *ngIf="isAuthenticated" routerLink="/calificarMesero" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calificar Mesero</a>
 
             </div>
           </div>
@@ -62,12 +62,12 @@
     <div [ngClass]="{'block': isMobileMenuOpen, 'hidden': !isMobileMenuOpen}" class="sm:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3">
         <a routerLink="/inicio" routerLinkActive="active" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
-        <a routerLink="/ingreso" routerLinkActive="active" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Ingreso</a>
-        <a routerLink="/menu" routerLinkActive="active" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Plato</a>
-        <a routerLink="/user" routerLinkActive="active" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Usuario</a>
-        <a routerLink="/verMenu" routerLinkActive="active" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Ver Menu</a>
-        <a routerLink="/meseros" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Mesero</a>
-        <a routerLink="/calificarMesero" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calificar Mesero</a>
+        <a *ngIf="!isAuthenticated" routerLink="/ingreso" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
+        <a *ngIf="isAuthenticated" routerLink="/menu" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Plato</a>
+        <a *ngIf="isAuthenticated" routerLink="/user" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Usuario</a>
+        <a *ngIf="isAuthenticated" routerLink="/verMenu" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Ver Menu</a>
+        <a *ngIf="isAuthenticated" routerLink="/meseros" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Agregar Mesero</a>
+        <a *ngIf="isAuthenticated" routerLink="/calificarMesero" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calificar Mesero</a>
 
       </div>
     </div>

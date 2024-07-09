@@ -6,8 +6,8 @@
         <h2 class="text-xl font-semibold mb-2">{{ mesero.nombre }}</h2>
         <!-- Agregar campos para calificar mesero -->
         <div class="flex items-center mt-4">
-          <input type="number" min="1" max="5" [(ngModel)]="calificacion" class="w-16 h-8 border-gray-300 border rounded-md text-center mr-4" placeholder="Calificar">
-          <button (click)="calificarMesero(mesero._id, calificacion)" class="bg-blue-500 text-white py-2 px-4 rounded-md">Calificar</button>
+          <input type="number" id="calificacion-{{mesero._id}}" name="calificacion-{{mesero._id}}" min="1" max="5" [(ngModel)]="mesero.calificacion" class="w-16 h-8 border-gray-300 border rounded-md text-center mr-4" placeholder="Calificar">
+          <button (click)="calificarMesero(mesero._id, mesero.calificacion)" class="bg-blue-500 text-white py-2 px-4 rounded-md">Calificar</button>
         </div>
       </div>
     </div>
