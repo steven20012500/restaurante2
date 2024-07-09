@@ -12,32 +12,7 @@ export class OrderService {
 
   
   constructor(private http: HttpClient) { }
-/*
-  createOrder(data: any, token: string): Observable<any> {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
-    });
 
-    return this.http.post<any>(this.apiUrl, data, { headers })
-      .pipe(
-        catchError(this.handleError)
-      );
-  }
-
-  private handleError(error: HttpErrorResponse) {
-    if (error.error instanceof ErrorEvent) {
-      // Error del lado del cliente
-      console.error('Error del cliente:', error.error.message);
-    } else {
-      // El servidor devolvió un código de error
-      console.error(
-        `Código de error ${error.status}, ` +
-        `mensaje: ${error.error}`);
-    }
-    // Devuelve un observable con un mensaje de error orientado al usuario
-    return throwError('Algo salió mal; por favor, inténtalo de nuevo más tarde.');
-  }*/
     createOrder(orderData: any, token: string): Observable<any> {
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
