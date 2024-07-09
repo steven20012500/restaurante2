@@ -20,8 +20,9 @@
   <h1>Crear orden</h1>
 
   <div *ngFor="let order of orders">
-    <p>{{order.dishId}} cantidad: {{ order.quantity }}</p>
+    <p>{{devolverPlato(order.dishId)}} cantidad: {{ order.quantity }}
   </div>
+  <p>Total: {{ calcularPrecioFinal() | currency}}</p> 
 
   <button (click)="GenerarOrden()" class="mt-6 bg-green-500 text-white py-2 px-4 rounded-md">Generar Orden</button>
 </div>

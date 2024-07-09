@@ -3,10 +3,11 @@ import { MenuService } from '../services/menu.service';
 import { Menu } from '../class/menu';
 import { OrderService } from '../services/order.service';
 import { StorageService } from '../services/storage.service';
+
 @Component({
   selector: 'app-ver-menu',
   templateUrl: './ver-menu.component.html',
-  styleUrl: './ver-menu.component.css'
+  styleUrls: ['./ver-menu.component.css'] // Cambié a 'styleUrls' para arreglar el typo
 })
 export class VerMenuComponent implements OnInit {
   menu: Menu[] = [];
@@ -26,26 +27,38 @@ export class VerMenuComponent implements OnInit {
     });
   }
 
-  orderData = { dishId: '', quantity: 1 };
+  devolverPlato(id: string): string | null {
+    const item = this.menu.find(item => item._id === id);
+    return item ? item.nombre : null;
+  }
 
-  selectDish(menu: Menu) {
-    // Verificar si ya existe el plato en las órdenes
+  calcularPrecioFinal(): number {
+    let total = 0;
+
+    this.orders.forEach(order => {
+      const menuItem = this.menu.find(item => item._id === order.dishId);
+      if (menuItem) {
+        total += order.quantity * menuItem.precio;
+      }
+    });
+
+    return total;
+  }
+
+  selectDish(menu: Menu): void {
     const existingOrderIndex = this.orders.findIndex(order => order.dishId === menu._id);
 
     if (existingOrderIndex !== -1) {
-      // Si ya existe, actualizar la cantidad
       this.orders[existingOrderIndex].quantity += menu.quantity;
       this.quantitySelected = true;
     } else {
-      // Si no existe, agregar como nueva orden
       this.orders.push({ dishId: menu._id, quantity: menu.quantity });
       this.quantitySelected = true;
     }
-    menu.quantitySelected = true; // Marcar el plato como seleccionado
-
+    menu.quantitySelected = true;
   }
 
-  GenerarOrden() {
+  GenerarOrden(): void {
     const token = this.storageService.getItem('token');
    
     if (!token) {
@@ -58,27 +71,26 @@ export class VerMenuComponent implements OnInit {
       return;
     }
 
-    // Recorrer todas las órdenes seleccionadas y crear una orden para cada una
-    this.orders.forEach(order => {
-      this.orderService.createOrder(order, token)
-        .subscribe(
-          (response) => {
-            console.log(`Orden creada exitosamente para dishId ${order.dishId}:`, response);
-            // Aquí puedes manejar la respuesta del servidor, como mostrar un mensaje de éxito o navegar a otra página
-            this.showGenerateMessage = true; // Mostrar mensaje de orden generada exitosamente
+    const orderData = {
+      dishes: this.orders.map(order => ({
+        dishId: order.dishId,
+        quantity: order.quantity
+      })),
+      total: this.calcularPrecioFinal() // Calcular el total de la orden
+    };
 
-          },
-          (error) => {
-            console.error(`Error al crear la orden para dishId ${order.dishId}:`, error);
-            // Aquí puedes manejar el error, como mostrar un mensaje de error al usuario
-          }
-        );
-    });
-
-    // Limpiar las órdenes después de generarlas
-    this.orders = [];
-    this.menu = this.menu.map(item => ({ ...item, quantity: 1, quantitySelected: false}));
-
-
+    this.orderService.createOrder(orderData, token).subscribe(
+      (response) => {
+        console.log('Orden creada exitosamente:', response);
+        this.showGenerateMessage = true; // Mostrar mensaje de orden generada exitosamente
+        // Limpiar las órdenes después de generarlas
+        this.orders = [];
+        this.menu = this.menu.map(item => ({ ...item, quantity: 1, quantitySelected: false }));
+      },
+      (error) => {
+        console.error('Error al crear la orden:', error);
+        // Aquí puedes manejar el error, como mostrar un mensaje de error al usuario
+      }
+    );
   }
 }
