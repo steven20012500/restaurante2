@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
 const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-require('./database');
+//require('./database');
 require('dotenv').config();
 
 app.use(express.json());
@@ -14,15 +16,16 @@ app.use(cors());
 app.use('/api-menu/',require('./routes/server.routes'));
 app.use(bodyParser.json());
 
+const dbURI = 'mongodb+srv://jsuntaxic:nyAxUz78d0sHNLAp@restaurante.kdgk98n.mongodb.net/?retryWrites=true&w=majority&appName=Restaurante';
 
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB Atlas connected'))
+  .catch(err => console.error('MongoDB Atlas connection error:', err));
+
+// Start server
 app.listen(PORT, () => {
-//const crypto = require('crypto');
-//console.log(crypto.randomBytes(64).toString('hex'));
-//npm install dotenv  para instalar dotenv
-// npm install dotenv --save-dev
-  console.log(`Servidor backend corriendo en el puerto ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
-
 
 
 
