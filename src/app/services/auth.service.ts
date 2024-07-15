@@ -8,7 +8,7 @@ import { StorageService } from '../services/storage.service';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000/api-menu/ingreso';
+  private apiUrl = 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/ingreso';
 
   constructor(
     private http: HttpClient,

@@ -8,7 +8,7 @@ import { StorageService } from './storage.service';
   providedIn: 'root'
 })
 export class OrderService {
-  private apiUrl = 'http://localhost:3000/api-menu/orden';
+  private apiUrl = 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/orden';
 
   
   constructor(private http: HttpClient) { }

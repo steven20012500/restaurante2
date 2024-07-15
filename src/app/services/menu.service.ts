@@ -7,8 +7,8 @@ import { Menu } from '../class/menu';
   providedIn: 'root'
 })
 export class MenuService {
-  private apiUrl2= 'http://localhost:3000/api-menu/ingresoPlatos'
-  private apiUrl3= 'http://localhost:3000/api-menu/verPlatos'
+  private apiUrl2= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/ingresoPlatos'
+  private apiUrl3= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/verPlatos'
   constructor(private http: HttpClient) { }
   
   agregarPlato(plato: any) {
