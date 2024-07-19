@@ -34,7 +34,7 @@ orderController.createOrder = async (req, res) => {
   };
   orderController.deletePedido = async (req, res) => {
     try {
-        await User.findByIdAndDelete(req.params.id);
+        await Order.findByIdAndDelete(req.params.id);
         res.json({ message: 'Pedido eliminado' });
     } catch (error) {
         console.error('Error al eliminar pedido:', error);

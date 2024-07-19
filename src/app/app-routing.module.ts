@@ -9,6 +9,7 @@ import { authGuard } from './guards/auth.guard';
 import { MeserosComponent } from './meseros/meseros.component';
 import { CalificarMeseroComponent } from './calificar-mesero/calificar-mesero.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { BorrarPedidoComponent } from './borrar-pedido/borrar-pedido.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'meseros', component: MeserosComponent, canActivate : [authGuard]},
   { path: 'verMenu', component: VerMenuComponent, canActivate : [authGuard]},
   { path: 'inicio', component: InicioComponent},
+  { path: 'deletePedido', component: BorrarPedidoComponent},
 
   { path: '', redirectTo: '/inicio', pathMatch: 'full' } // Redirige al informacion por defecto
 ];
