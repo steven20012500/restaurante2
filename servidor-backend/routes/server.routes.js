@@ -16,7 +16,7 @@ router.post('/ingresoMesero', mesero.addMesero);
 router.get('/verMeseros',mesero.getMeseros);
 router.post('/calificarMesero',mesero.calificarMesero);
 router.get('/pedido',order.getPedido);
-router.delete('/Dpedido',order.deletePedido);
+router.delete('/Dpedido/:id',order.deletePedido);
 
 //router.get('/tareas-privadas', user.getTasksPrivadas);
 module.exports = router;
