@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const URI = 'mongodb+srv://jsuntaxic:nyAxUz78d0sHNLAp@restaurante.kdgk98n.mongodb.net/?retryWrites=true&w=majority&appName=Restaurante'
+const URI = 'mongodb+srv://jsuntaxic:nyAxUz78d0sHNLAp@Restaurante.kdgk98n.mongodb.net/restaurante?retryWrites=true&w=majority&appName=Restaurante'
 mongoose.connect(URI)
 .then (db => console.log('DB conectada'))
 .catch(err => console.error(err));
