@@ -13,6 +13,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { MeserosComponent } from './meseros/meseros.component';
 import { CalificarMeseroComponent } from './calificar-mesero/calificar-mesero.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { BorrarPedidoComponent } from './borrar-pedido/borrar-pedido.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { InicioComponent } from './inicio/inicio.component';
     NavigationComponent,
     MeserosComponent,
     CalificarMeseroComponent,
-    InicioComponent
+    InicioComponent,
+    BorrarPedidoComponent
   ],
   imports: [
     BrowserModule,
