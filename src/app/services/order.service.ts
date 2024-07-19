@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
 import { AuthService } from './auth.service';
+import { Pedido } from '../class/pedido';
 import { StorageService } from './storage.service';
 
 @Injectable({
@@ -9,8 +10,9 @@ import { StorageService } from './storage.service';
 })
 export class OrderService {
   private apiUrl = 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/orden';
+  private apiUrl2 = 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/pedido';
+  private apiUrl3 = 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/Dpedido'; // URL al archivo JSON
 
-  
   constructor(private http: HttpClient) { }
 
     createOrder(orderData: any, token: string): Observable<any> {
@@ -30,5 +32,11 @@ export class OrderService {
           }
         })
       );
+    }
+    verPedido(): Observable<Pedido[]> {
+      return this.http.get<Pedido[]>(this.apiUrl2);
+    }
+    deletePedido(id: string): Observable<any> {
+      return this.http.delete<any>(`${this.apiUrl3}/${id}`);
     }
 }
