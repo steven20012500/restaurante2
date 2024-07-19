@@ -27,4 +27,27 @@ platosController.addPlato = async (req, res) => {
       }
 }
 
+platosController.updateMenu = async (req, res) => {
+  const { id } = req.params;
+  const { nombre, descripcion, precio, imagen, categoria } = req.body;
+
+  try {
+    const updatedMenu = await Menu.findByIdAndUpdate(
+      id,
+      { nombre, descripcion, precio, imagen, categoria },
+      { new: true }  // Devolver el documento actualizado
+    );
+
+    if (!updatedMenu) {
+      return res.status(404).json({ message: 'Plato no encontrado' });
+    }
+
+    res.json({ message: 'Plato actualizado', updatedMenu });
+  } catch (error) {
+    console.error('Error al actualizar el plato:', error);
+    res.status(500).json({ message: 'Error interno al actualizar el plato' });
+  }
+};
+
+
 module.exports = platosController;

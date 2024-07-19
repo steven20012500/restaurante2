@@ -14,6 +14,7 @@ import { MeserosComponent } from './meseros/meseros.component';
 import { CalificarMeseroComponent } from './calificar-mesero/calificar-mesero.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { BorrarPedidoComponent } from './borrar-pedido/borrar-pedido.component';
+import { UpdateMenuComponent } from './update-menu/update-menu.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { BorrarPedidoComponent } from './borrar-pedido/borrar-pedido.component';
     MeserosComponent,
     CalificarMeseroComponent,
     InicioComponent,
-    BorrarPedidoComponent
+    BorrarPedidoComponent,
+    UpdateMenuComponent
   ],
   imports: [
     BrowserModule,

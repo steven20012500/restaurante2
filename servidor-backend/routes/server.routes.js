@@ -17,6 +17,7 @@ router.get('/verMeseros',mesero.getMeseros);
 router.post('/calificarMesero',mesero.calificarMesero);
 router.get('/pedido',order.getPedido);
 router.delete('/Dpedido/:id',order.deletePedido);
+router.put('Uplatos/:id',platos.updateMenu);
 
 //router.get('/tareas-privadas', user.getTasksPrivadas);
 module.exports = router;
