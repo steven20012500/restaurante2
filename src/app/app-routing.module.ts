@@ -10,7 +10,7 @@ import { MeserosComponent } from './meseros/meseros.component';
 import { CalificarMeseroComponent } from './calificar-mesero/calificar-mesero.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { BorrarPedidoComponent } from './borrar-pedido/borrar-pedido.component';
-
+import { UpdatePlatosComponent } from './update-platos/update-platos.component';
 
 const routes: Routes = [
   { path: 'ingreso', component: IngresoComponent },
@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'verMenu', component: VerMenuComponent, canActivate : [authGuard]},
   { path: 'inicio', component: InicioComponent},
   { path: 'deletePedido', component: BorrarPedidoComponent},
+  { path: 'updateP', component: UpdatePlatosComponent},
 
   { path: '', redirectTo: '/inicio', pathMatch: 'full' } // Redirige al informacion por defecto
 ];

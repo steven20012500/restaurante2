@@ -1,0 +1,27 @@
+<div class="container mx-auto py-8">
+    <h1 class="text-2xl font-bold mb-6">Actualizar Plato</h1>
+    <form (ngSubmit)="updateMenu()">
+      <div class="mb-4">
+        <label for="nombre" class="block text-gray-700">Nombre</label>
+        <input [(ngModel)]="menu.nombre" name="nombre" type="text" class="w-full border-gray-300 rounded-md">
+      </div>
+      <div class="mb-4">
+        <label for="descripcion" class="block text-gray-700">Descripción</label>
+        <input [(ngModel)]="menu.descripcion" name="descripcion" type="text" class="w-full border-gray-300 rounded-md">
+      </div>
+      <div class="mb-4">
+        <label for="precio" class="block text-gray-700">Precio</label>
+        <input [(ngModel)]="menu.precio" name="precio" type="number" class="w-full border-gray-300 rounded-md">
+      </div>
+      <div class="mb-4">
+        <label for="imagen" class="block text-gray-700">Imagen URL</label>
+        <input [(ngModel)]="menu.imagen" name="imagen" type="text" class="w-full border-gray-300 rounded-md">
+      </div>
+      <div class="mb-4">
+        <label for="categoria" class="block text-gray-700">Categoría</label>
+        <input [(ngModel)]="menu.categoria" name="categoria" type="text" class="w-full border-gray-300 rounded-md">
+      </div>
+      <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md">Actualizar</button>
+    </form>
+  </div>
+  
