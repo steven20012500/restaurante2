@@ -1,0 +1,14 @@
+{
+  "routes": [
+    "/calificarMesero",
+    "/deletePedido",
+    "/ingreso",
+    "/inicio",
+    "/menu",
+    "/meseros",
+    "/navigation",
+    "/updateP",
+    "/user",
+    "/verMenu"
+  ]
+}
