@@ -7,9 +7,9 @@ import { Menu } from '../class/menu';
   providedIn: 'root'
 })
 export class MenuService {
-  private apiUrl2= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/ingresoPlatos'
-  private apiUrl3= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/verPlatos'
-  private apiUrl4= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/Uplatos'
+  private apiUrl2= 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/ingresoPlatos'
+  private apiUrl3= 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/verPlatos'
+  private apiUrl4= 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/Uplatos'
   constructor(private http: HttpClient) { }
   
   agregarPlato(plato: any) {

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl1= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/registro'
+  private apiUrl1= 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/registro'
   constructor(private http: HttpClient) { }
   
   agregarUser(user: any) {

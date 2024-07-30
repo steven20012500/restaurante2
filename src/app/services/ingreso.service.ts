@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class IngresoService {
-  private apiUrl1= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/ingreso'
-  private apiUrl2= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/Umenu'
+  private apiUrl1= 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/ingreso'
+  private apiUrl2= 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/Umenu'
 
   constructor(private http: HttpClient) { }
   

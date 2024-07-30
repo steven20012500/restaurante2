@@ -8,9 +8,9 @@ import { Mesero } from '../class/mesero';
 })
 export class MeserosService {
 
-  private apiUrl1= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/ingresoMesero'
-  private apiUrl3= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/verMeseros'
-  private apiUrl4= 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/calificarMesero'
+  private apiUrl1= 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/ingresoMesero'
+  private apiUrl3= 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/verMeseros'
+  private apiUrl4= 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/calificarMesero'
 
   constructor(private http: HttpClient) { }
   
